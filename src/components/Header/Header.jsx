@@ -1,13 +1,13 @@
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const Header = () => {
     return (
         <div className="hero_area">
-            <div className="hero_bg_box">
+            {/* <div className="hero_bg_box">
                 <img src="./src/asset/images/slider-bg.jpg" alt="" />
-            </div>
+            </div> */}
             <section className="slider_section ">
                 {/*  data-interval="100" */}
-                <div id="customCarousel1" className="carousel slide" data-ride="carousel">
+                {/* <div id="customCarousel1" className="carousel slide" data-ride="carousel">
                     <div className="carousel-inner">
                         <div className="carousel-item active">
                             <div className="container ">
@@ -53,6 +53,43 @@ const Header = () => {
                                                     Read More
                                                 </a>
                                             </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> */}
+
+                <div className="container">
+                    <div className="col-12">
+                        <div className="row">
+                            <div className="col-md-6 col-12">
+                                <div className="home_left_area">
+                                    <h1>Best <span> Wash & Iron service </span>
+                                        in your doorstep</h1>
+                                    <p>Smart Dhopa is the first Online Laundry Platform in DIU with the latest
+                                        technology in washing, dry cleaning and laundry. Our
+                                        services combine our expertise and experience acquired over a period of time to provide you with
+                                        clean laundry in the shortest possible turnaround time.
+                                    </p>
+                                    <button className="button_service"><NavLink to="/service" className="button_service">View Services</NavLink></button>
+                                </div>
+                            </div>
+                            <div className="col-md-6 col-12">
+                                <div id="carouselExampleSlidesOnly" className="carousel slide home_right_area" data-ride="carousel">
+                                    <div className="carousel-inner">
+                                        <div className="carousel-item active">
+                                            <img className="d-block w-100" width="600px" height="400px" src="/src/asset/images/home1.svg" alt="First slide" />
+                                        </div>
+                                        <div className="carousel-item">
+                                            <img className="d-block w-100" width="600px" height="400px" src="/src/asset/images/home2.svg" alt="Second slide" />
+                                        </div>
+                                        <div className="carousel-item">
+                                            <img className="d-block w-100" width="600px" height="400px" src="/src/asset/images/home3.svg" alt="Third slide" />
+                                        </div>
+                                        <div className="carousel-item">
+                                            <img className="d-block w-100" width="600px" height="400px" src="/src/asset/images/home4.svg" alt="Four slide" />
                                         </div>
                                     </div>
                                 </div>

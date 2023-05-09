@@ -78,15 +78,14 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-            </section>
-            <footer className="footer_section">
-                <div className="container">
+                <footer className="footer_section">
                     <p>
                         &copy; <span id="displayYear"></span> All Rights Reserved By
                         <a href="/"> E-laundry</a>
                     </p>
-                </div>
-            </footer>
+                </footer>
+            </section >
+
         </>
     )
 }

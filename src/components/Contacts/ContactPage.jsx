@@ -1,5 +1,11 @@
+import { NavLink } from "react-router-dom"
 
 const ContactPage = () => {
+
+    const sendMail = () => {
+        alert('Hello')
+    }
+
     return (
         <section>
             <div className="container contact_area pt-5">
@@ -10,7 +16,7 @@ const ContactPage = () => {
                                 <div>
                                     <h2 className="text-center mb-5">CONTACT US</h2>
                                 </div>
-                                <form method="post" data-form-title="CONTACT US">
+                                <form>
                                     <div className="form-group">
                                         <input type="text" className="form-control" name="name" required="" placeholder="Name*" data-form-field="Name" />
                                     </div>
@@ -24,7 +30,7 @@ const ContactPage = () => {
                                         <textarea className="form-control" name="message" placeholder="Message" rows="7" data-form-field="Message"></textarea>
                                     </div>
                                     <div>
-                                        <button type="submit" className="btn btn-lg btn-submit">CONTACT US</button>
+                                        <NavLink to="/" ><button className="btnContact" onClick={sendMail}>CONTACT US</button></NavLink>
                                     </div>
                                 </form>
                             </div>

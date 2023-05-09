@@ -1,6 +1,7 @@
 import About from './components/About/About'
 import Header from './components/Header/Header'
 import Services from './components/Service/Services'
+import WashService from './components/Service/WashService'
 import ContactPage from './components/Contacts/ContactPage'
 import Footer from './components/Footer/Footer'
 import NavBar from './components/Header/NavBar'
@@ -39,6 +40,8 @@ function App() {
             <Footer />
           </>
         } />
+
+
         <Route path='/service' element={
           <>
             <NavBar />
@@ -46,6 +49,16 @@ function App() {
             <Footer />
           </>
         } />
+
+        <Route path='/wash-service' element={
+          <>
+            <NavBar />
+            <WashService />
+            <Footer />
+          </>
+        } />
+
+
         <Route path='/contact' element={
           <>
             <NavBar />
