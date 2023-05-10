@@ -2,6 +2,7 @@ import React from 'react'
 import './wash.css'
 import './wash.js'
 
+
 const WashService = () => {
     return (
         <div className='container-fluid pt-5'>
@@ -38,24 +39,20 @@ const WashService = () => {
                                                 <div class="tab-pane active" role="tabpanel" id="step1">
                                                     <h4 class="text-center">Select Your Order</h4>
                                                     <div class="row">
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                            <label class="form-check-label" for="flexCheckDefault">
-                                                                Wash Male Service
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                            <label class="form-check-label" for="flexCheckDefault">
-                                                                Wash Female Service
-                                                            </label>
-                                                        </div>
-                                                        <div class="form-check">
-                                                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
-                                                            <label class="form-check-label" for="flexCheckDefault">
-                                                                Wash Household Service
-                                                            </label>
-                                                        </div>
+                                                        <form class="form">
+                                                            <div class="inputGroup">
+                                                                <input id="option1" name="option1" type="checkbox" />
+                                                                <label for="option1">Male Service</label>
+                                                            </div>
+                                                            <div class="inputGroup">
+                                                                <input id="option2" name="option2" type="checkbox" />
+                                                                <label for="option2">Female Service</label>
+                                                            </div>
+                                                            <div class="inputGroup">
+                                                                <input id="option3" name="option3" type="checkbox" />
+                                                                <label for="option3">Other Service</label>
+                                                            </div>
+                                                        </form>
                                                     </div>
                                                     <ul class="list-inline pull-right">
                                                         <li><button type="button" class="default-btn next-step"><a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" aria-expanded="true">Next step</a></button></li>

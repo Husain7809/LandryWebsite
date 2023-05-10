@@ -6,6 +6,8 @@ padding: 0;
 body {
 background: #f0f4f3;
 font-family: 'Roboto', sans-serif;
+/* max-height: 90vh;
+overflow: hidden; */
 }
 .button {
 border: 1px solid #fff;
@@ -45,11 +47,12 @@ text-transform: uppercase;
 #login .submit-btn {
 background: #ff7241;
 }
+
 #register .submit-btn {
 background: #ff7241;
 }
 #container {
-background: #ededed;
+background:#f1f2f3 !important;
 border-radius: 10px;
 height: 550px;
 margin: 5% auto;
@@ -64,7 +67,6 @@ padding: 10px;
 width: 15px;
 }
 #login {
-background: #fff;
 float: left;
 height: 100%;
 position: relative;
@@ -74,7 +76,6 @@ top: -550px;
 z-index: 1;
 }
 #register {
-background: #fff;
 float: right;
 height: 100%;
 position: relative;
@@ -101,8 +102,7 @@ letter-spacing: 0.3px;
 padding: 20px;
 }
 #forgot-pass {
-border-bottom: 1px solid #ccc;
-color: #000;
+color: black !important;
 font-size: 12px;
 font-weight: 500;
 letter-spacing: 0.3px;
@@ -110,7 +110,7 @@ padding: 3px;
 text-decoration: none;
 }
 #cover {
-background: #ff7241;
+background: #FF3636;
 color: #fff;
 height: 550px;
 margin: 0 0 0 50%;
@@ -136,7 +136,7 @@ position: relative;
 top: -11px;
 }
 #cover:target {
-background: #ff7241;
+background: #FF3636;
 margin: 0;
 }
 #cover:target .sign-up {
@@ -151,10 +151,4 @@ width: 35%;
 #credit {
 color: #999;
 font-size: 14px;
-}
-#info {
-background: #eaeaea;
-color: #555;
-padding: 20px;
-text-align: center;
 }

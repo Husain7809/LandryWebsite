@@ -287,7 +287,7 @@ body {
 width: 300px !important;
 margin: auto;
  }
- .service_section .buttonService{
+ .service_section #buttonService{
   margin-top: 20px;
     background-color: #FF3636;
     color: #fff;
@@ -296,7 +296,17 @@ margin: auto;
     padding: 8px;
     border-radius: 3px;
  }
+ .service_section .card img:hover{
+  cursor: pointer;
+  opacity: 0.9;
+}
 
+.service_section h2{
+  color: #FF3636;
+}
+.service_section .card-title{
+  color: #FF3636;
+}
 
 .about_section .row {
   -webkit-box-align: center;

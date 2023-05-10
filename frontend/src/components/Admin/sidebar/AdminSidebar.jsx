@@ -21,7 +21,7 @@ const AdminSidebar = () => {
                             <li className="nav-item"><NavLink to="/admin/users" className="nav-link">Users</NavLink></li>
                             {/* <li className="nav-item"><NavLink to="/admin/registration" className="nav-link">Registration</NavLink></li> */}
                             <li className="nav-item"><NavLink to="/admin/support" className="nav-link">Support</NavLink></li>
-                            <li className="nav-item"><NavLink to="/admin/support" className="nav-link">Logout</NavLink></li>
+                            <li className="nav-item"><NavLink to="/" className="nav-link">Logout</NavLink></li>
                         </ul>
                     </div>
                     {

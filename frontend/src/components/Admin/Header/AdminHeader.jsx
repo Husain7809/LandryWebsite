@@ -1,12 +1,12 @@
 const AdminHeader = () => {
     return (
-        <div>
+        <div className="admin_header">
             <nav className="navbar fixed-top navbar-expand-md mb-3">
                 <div className="flex-row d-flex">
                     <button type="button" className="navbar-toggler mr-2 " data-toggle="offcanvas" title="Toggle responsive left sidebar">
                         <span className="navbar-toggler-icon"></span>
                     </button>
-                    <a className="navbar-brand ml-3" href="">Dashboard</a>
+                    <a className="navbar-brand ml-3" href="">cleanX</a>
                 </div>
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar">
                     <span className="navbar-toggler-icon"></span>

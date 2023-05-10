@@ -3,8 +3,7 @@ import './login.css'
 const Login = () => {
     return (
         <>
-            <div id="info">
-            </div><div id="container">
+            <div id="container" className='user_auth'>
                 <div id="cover">
                     <h1 className="sign-up">Hello, Guess!</h1>
                     <p className="sign-up">Enter your personal details<br /> and start a journey with us</p>
@@ -40,7 +39,8 @@ const Login = () => {
                         <input className="submit-btn" type="submit" value="Sign Up" />
                     </form>
                 </div>
-            </div></>
+            </div>
+        </>
 
 
     )
