@@ -2,7 +2,7 @@
 body {
   font-family: 'Roboto Condensed', sans-serif;
   color: #0c0c0c;
-  background-color: #ffffff;
+  background-color: #ffffff !important;
   overflow-x: hidden;
   z-index: 0;
 }
@@ -31,9 +31,15 @@ body {
   padding-bottom: 90px;
 }
 
+#profile .dropdown-toggle{
+  border: none;
+  padding: 6px;
+  background-color: transparent;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+  color: white;
+}
 
 
- 
 /*header section*/
 
 .hero_area {
@@ -789,7 +795,9 @@ a{
   width: 100% !important;
 }
 
-
+h2{
+  color: #FF3636;
+}
  .contact_area input{
   width: 100% !important;
   background-color: transparent !important;

@@ -3,12 +3,21 @@ import './dashboard_style'
 import AdminDashboard from "../Dashboard/AdminDashboard";
 import AdminOrder from "../Orders/AdminOrder";
 import AdminUsers from "../Customers/AdminUsers";
-
-
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import Cookies from 'js-cookie'
 
 
 const AdminSidebar = () => {
+
+    const navigate = useNavigate();
+
+    // logout function
+    const logout = () => {
+        Cookies.remove('token');
+        navigate('/service')
+    }
+
     return (
         <div>
             <div className="container-fluid" id="main">
@@ -17,11 +26,11 @@ const AdminSidebar = () => {
                         <ul className="nav flex-column sticky-top pl-0 pt-5 mt-3">
                             <li className="nav-item"><NavLink to="/admin/dashboard" className="nav-link">Dashboard</NavLink></li>
                             <li className="nav-item"><NavLink to="/admin/orders" className="nav-link">Orders</NavLink></li>
-                            <li className="nav-item"><NavLink to="/admin/products" className="nav-link">Poducts</NavLink></li>
+                            {/* <li className="nav-item"><NavLink to="/admin/products" className="nav-link">Poducts</NavLink></li> */}
                             <li className="nav-item"><NavLink to="/admin/users" className="nav-link">Users</NavLink></li>
                             {/* <li className="nav-item"><NavLink to="/admin/registration" className="nav-link">Registration</NavLink></li> */}
                             <li className="nav-item"><NavLink to="/admin/support" className="nav-link">Support</NavLink></li>
-                            <li className="nav-item"><NavLink to="/" className="nav-link">Logout</NavLink></li>
+                            <li className="nav-item"><button className="nav-link" style={{ background: 'white', border: 'none', color: 'black', marginLeft: '14px' }} onClick={logout}>Logout</button></li>
                         </ul>
                     </div>
                     {

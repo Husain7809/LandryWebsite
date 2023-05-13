@@ -12,14 +12,14 @@ const AdminHeader = () => {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="navbar-collapse collapse" id="collapsingNavbar">
-                    <ul className="navbar-nav ml-auto mr-4">
+                    {/* <ul className="navbar-nav ml-auto mr-4">
                         <li className="nav-item">
                             <a className="nav-link" href="#myAlert" data-toggle="collapse">User</a>
                         </li>
                         <li className="nav-item">
                             <a className="nav-link" href="" data-target="#myModal" data-toggle="modal">Logout</a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </nav>
         </div>

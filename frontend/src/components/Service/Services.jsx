@@ -1,6 +1,11 @@
 import { NavLink } from "react-router-dom"
 
+
 const Services = () => {
+
+
+
+
     return (
         <section className="service_section layout_padding">
             <div className="container">
@@ -14,7 +19,7 @@ const Services = () => {
                                     <div class="card-body">
                                         <h5 class="card-title">Wash & Fold</h5>
                                         <p class="card-text">Just in case you choose not to use our steam ironing services we will wash and fold them for you.</p>
-                                        <NavLink id="buttonService" to="/wash-service">Select Service</NavLink>
+                                        <NavLink id="buttonService" to="/cart-and-shipment">Select Service</NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -24,7 +29,7 @@ const Services = () => {
                                     <div class="card-body">
                                         <h5 class="card-title">Wash & Iron</h5>
                                         <p class="card-text">All your regular wear garments will be washed, steam ironed and neatly packed for delivery.</p>
-                                        <NavLink id="buttonService" to="/wash-service">Select Service</NavLink>
+                                        <NavLink id="buttonService" to="/cart-and-shipment">Select Service</NavLink>
                                     </div>
                                 </div>
                             </div>
@@ -34,7 +39,7 @@ const Services = () => {
                                     <div class="card-body">
                                         <h5 class="card-title">Dry Cleaning</h5>
                                         <p class="card-text">All your sensitive and special garments will be individually treated for any stains and dry cleaned.</p>
-                                        <NavLink id="buttonService" to="/wash-service">Select Service</NavLink>
+                                        <NavLink id="buttonService" to="/cart-and-shipment">Select Service</NavLink>
                                     </div>
                                 </div>
                             </div>

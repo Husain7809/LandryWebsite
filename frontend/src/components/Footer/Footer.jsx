@@ -14,16 +14,16 @@ const Footer = () => {
                                 </p>
                                 <div className="info_social">
                                     <a href="">
-                                        <i className="fa fa-facebook" aria-hidden="true"></i>
+                                        <i class="fa-brands fa-facebook"></i>
                                     </a>
                                     <a href="">
-                                        <i className="fa fa-twitter" aria-hidden="true"></i>
+                                        <i class="fa-brands fa-twitter"></i>
                                     </a>
                                     <a href="">
-                                        <i className="fa fa-linkedin" aria-hidden="true"></i>
+                                        <i class="fa-brands fa-linkedin"></i>
                                     </a>
                                     <a href="">
-                                        <i className="fa fa-instagram" aria-hidden="true"></i>
+                                        <i class="fa-brands fa-instagram"></i>
                                     </a>
                                 </div>
                             </div>
@@ -58,7 +58,7 @@ const Footer = () => {
                                     <a href="">
                                         <i className="fa fa-envelope" aria-hidden="true"></i>
                                         <span>
-                                            demo@gmail.com
+                                            mishivam673@gmail.com
                                         </span>
                                     </a>
                                     <p>
