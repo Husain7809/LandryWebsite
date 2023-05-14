@@ -3,6 +3,7 @@ import './dashboard_style'
 import AdminDashboard from "../Dashboard/AdminDashboard";
 import AdminOrder from "../Orders/AdminOrder";
 import AdminUsers from "../Customers/AdminUsers";
+import AdminSupport from "../Customers/AdminSupport";
 import { NavLink } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import Cookies from 'js-cookie'
@@ -37,7 +38,8 @@ const AdminSidebar = () => {
                         window.location.pathname == '/admin/dashboard' ? <AdminDashboard />
                             : window.location.pathname == "/admin/orders" ? <AdminOrder />
                                 : window.location.pathname == "/admin/users" ? <AdminUsers />
-                                    : ""
+                                    : window.location.pathname == "/admin/support" ? <AdminSupport />
+                                        : ""
                     }
 
                     {/* {<AdminDashboard />} */}

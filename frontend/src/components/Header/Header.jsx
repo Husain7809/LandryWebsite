@@ -5,9 +5,9 @@ const Header = () => {
             <section className="slider_section ">
 
                 <div className="container">
-                    <div className="col-12">
+                    <div className="col-12 d-flex">
                         <div className="row">
-                            <div className="col-md-6 col-12">
+                            <div className="col-md-6 mx-auto col-12">
                                 <div className="home_left_area">
                                     <h1>Best <span> Wash & Iron service </span>
                                         in your doorstep</h1>
@@ -19,7 +19,7 @@ const Header = () => {
                                     <button className="button_service"><NavLink to="/service" className="button_service">View Services</NavLink></button>
                                 </div>
                             </div>
-                            <div className="col-md-6 col-12">
+                            <div className="col-md-6 mx-auto col-12">
                                 <div id="carouselExampleSlidesOnly" className="carousel slide home_right_area" data-ride="carousel">
                                     <div className="carousel-inner">
                                         <div className="carousel-item active">

@@ -254,6 +254,7 @@ body {
 }
 .home_left_area{
   padding-right: 150px !important;
+  /* margin-top: 9rem; */
 }
 .home_left_area h1{
   font-size: 2.5em;
@@ -270,6 +271,15 @@ body {
   text-align: justify;
 }
 
+
+@media only screen and (max-width: 1236px) {
+  .home_left_area {
+   padding: 0 !important;
+   margin-top: 10rem;
+  }
+}
+
+
 .home_left_area .button_service{
   margin-top: 20px;
   background-color: #FF3636;
@@ -280,6 +290,9 @@ body {
   border-radius:3px;
 }
 
+.home_right_area{
+  /* margin-top: 9rem; */
+}
 .home_right_area img{
   width: 600px;
   height: 400px;

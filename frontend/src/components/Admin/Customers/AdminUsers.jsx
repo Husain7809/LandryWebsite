@@ -65,7 +65,7 @@ const AdminUsers = () => {
                                         <th scope="col">Name</th>
                                         <th scope="col">Email</th>
                                         <th scope="col">Date</th>
-                                        <th scope="col">Action</th>
+                                        {/* <th scope="col">Action</th> */}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -76,17 +76,16 @@ const AdminUsers = () => {
                                                 <td>{val.name}</td>
                                                 <td>{val.email}</td>
                                                 <td>{val.date}</td>
-                                                <td>
+                                                {/* <td>
                                                     <button className='btn btn-sm btn-success'>Edit</button>&nbsp;
                                                     <button className='btn btn-sm btn-danger'>Delete</button>
-                                                </td>
+                                                </td> */}
                                             </tr>
                                         }) : <tr ><td colSpan="10">No order are here</td></tr>
                                     }
                                 </tbody>
                             </table>
                     }
-
                 </div>
             </div>
         </div >

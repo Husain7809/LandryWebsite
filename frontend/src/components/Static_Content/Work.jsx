@@ -71,8 +71,7 @@ const Work = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="col-md-6 col-12 mx-auto">
-                            {/* <VideoPlayer src="./works.mp4" poster="./videoImg.jpg" width="720" height="360" className="mt-4" /> */}
+                        <div className="col-md-6 col-12 mx-auto text-center" id='video'>
                             <video width="auto" height="500" poster={Poster} controls>
                                 <source src={VideoSrc} className="mt-4" type="video/mp4" />
                             </video>

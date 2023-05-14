@@ -56,7 +56,9 @@ body, html {
  
   .admin_header .navbar{
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
   }
   .admin_header .navbar a{
     color: black !important;
@@ -67,7 +69,8 @@ body, html {
   }
   #main .sidebar-offcanvas {
     background-color: #fff;
-    box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+    /* box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
   }
   .sidebar-offcanvas  a{
     color: black !important;
