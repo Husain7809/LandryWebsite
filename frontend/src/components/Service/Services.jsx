@@ -2,15 +2,11 @@ import { NavLink } from "react-router-dom"
 
 
 const Services = () => {
-
-
-
-
     return (
         <section className="service_section layout_padding">
             <div className="container">
                 <div className="row">
-                    <h2 className="text-center mb-5">Our Services</h2>
+                    <h2 className="text-center mb-5 mt-5">Our Services</h2>
                     <div className="col-md-12 col-12">
                         <div className="row">
                             <div className="col-md-4 col-12 mb-3">

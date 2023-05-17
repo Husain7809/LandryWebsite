@@ -9,7 +9,6 @@ import { useNavigate } from "react-router-dom";
 const NavBar = () => {
     const navigate = useNavigate();
 
-
     const [showBag, setShowBag] = useState(false)
     const [name, setName] = useState(false)
     const [token, setToken] = useState(null)
@@ -41,11 +40,11 @@ const NavBar = () => {
         <header className="header_section">
             <div className="container">
                 <nav className="navbar navbar-expand-lg custom_nav-container ">
-                    <a className="navbar-brand" href="/">
+                    <NavLink to="/" className="navbar-brand">
                         <span>
-                            cleanX
+                            <img src="/src/asset/images/logo.png" width="160px" heigth="10px" alt="" />
                         </span>
-                    </a>
+                    </NavLink>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span className=""> </span>
                     </button>
@@ -66,15 +65,19 @@ const NavBar = () => {
                             </li>
                             {
                                 showBag ?
-                                    <li className="nav-item">
-                                        <NavLink to="/cart-and-shipment" className="nav-link">Bag</NavLink>
-                                    </li>
+                                    <>
+                                        {/* <li className="nav-item">
+                                            <NavLink to="/cart-and-shipment" className="nav-link">Bag</NavLink>
+                                        </li> */}
+                                        <li className="nav-item">
+                                            <NavLink to="/dashboard" className="nav-link">Dashboard</NavLink>
+                                        </li>
+                                    </>
+
                                     : ""
                             }
 
-                            <li className="nav-item">
-                                <NavLink to="/dashboard" className="nav-link">Dashboard</NavLink>
-                            </li>
+
 
                             {
                                 name ?
@@ -83,7 +86,7 @@ const NavBar = () => {
                                             {name}
                                         </button>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a class="dropdown-item" href="#">My Profile</a>
+                                            {/* <a class="dropdown-item" href="#">My Profile</a> */}
                                             <a class="dropdown-item" href="" onClick={logout}>Sign Out</a>
                                         </div>
                                     </div> :
@@ -96,7 +99,7 @@ const NavBar = () => {
                     </div>
                 </nav>
             </div>
-        </header>
+        </header >
     )
 }
 

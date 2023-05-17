@@ -66,7 +66,9 @@ const AdminOrder = () => {
                                         <th scope="col">Name</th>
                                         <th scope="col">Phone</th>
                                         <th scope="col">Address</th>
+                                        <th scope="col">Service Type</th>
                                         <th scope="col">Payment</th>
+                                        <th scope="col">Quantity</th>
                                         <th scope="col">Payment Mode</th>
                                         <th scope="col">Order id</th>
                                         <th scope="col">Schedule Date</th>
@@ -82,10 +84,12 @@ const AdminOrder = () => {
                                                 <td>{val.name}</td>
                                                 <td>{val.phone}</td>
                                                 <td>{val.address}</td>
+                                                <td>{val.service_type}</td>
                                                 <td>{val.payment}</td>
+                                                <td>{val.qty}</td>
                                                 <td>{val.payment_mode}</td>
                                                 <td>{val._id}</td>
-                                                <td>{val.schedule_date}</td>
+                                                <td>{val.schedule_time}</td>
                                                 <td>{val.schedule_time}</td>
                                                 {/* <td>
                                                     <button className='btn btn-sm btn-success'>Edit</button>

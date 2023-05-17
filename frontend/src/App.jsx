@@ -19,7 +19,7 @@ import Order from './components/Dashboard/Order'
 import "./asset/js/custom"
 import Cart from './components/Dashboard/Cart';
 import Work from './components/Static_Content/Work'
-
+import ScrollToTop from '../src/components/ScrollToTop'
 
 
 
@@ -27,127 +27,129 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path='/' element={
-          <>
-            <NavBar />
-            <Header />
-            <Services />
-            <About />
-            <Work />
-            <Options />
-            <ReviewRating />
-            <ContactPage />
-            <Footer />
-          </>
-        } />
+      <ScrollToTop>
+        <Routes>
+          <Route path='/' element={
+            <>
+              <NavBar />
+              <Header />
+              <Services />
+              <About />
+              <Work />
+              <Options />
+              <ReviewRating />
+              <ContactPage />
+              <Footer />
+            </>
+          } />
 
-        <Route path='/about' element={
-          <>
-            <NavBar />
-            <About />
-            <Footer />
-          </>
-        } />
-
-
-        <Route path='/service' element={
-          <>
-            <NavBar />
-            <Services />
-            <Footer />
-          </>
-        } />
-
-        <Route path='/wash-service' element={
-          <>
-            <NavBar />
-            <WashService />
-            <Footer />
-          </>
-        } />
-
-        <Route path='/cart-and-shipment' element={
-          <>
-            <NavBar />
-            <Cart />
-            <Footer />
-          </>
-        } />
+          <Route path='/about' element={
+            <>
+              <NavBar />
+              <About />
+              <Footer />
+            </>
+          } />
 
 
-        <Route path='/contact' element={
-          <>
-            <NavBar />
-            <ContactPage />
-            <Footer />
-          </>
-        } />
-        <Route path='/dashboard' element={
-          <>
-            <NavBar />
-            <Order />
-            <Footer />
-          </>
-        } />
+          <Route path='/service' element={
+            <>
+              <NavBar />
+              <Services />
+              <Footer />
+            </>
+          } />
 
-        {/* admin  */}
+          <Route path='/wash-service' element={
+            <>
+              <NavBar />
+              <WashService />
+              <Footer />
+            </>
+          } />
 
-
-        <Route path='/admin/dashboard' element={
-          <>
-            <AdminSidebar />
-            <AdminHeader />
-          </>
-        } />
-
-        <Route path='/admin/orders' element={
-          <>
-            <AdminSidebar />
-            <AdminHeader />
-          </>
-        } />
+          <Route path='/cart-and-shipment' element={
+            <>
+              <NavBar />
+              <Cart />
+              <Footer />
+            </>
+          } />
 
 
-        <Route path='/admin/users' element={
-          <>
-            <AdminSidebar />
-            <AdminHeader />
-          </>
-        } />
+          <Route path='/contact' element={
+            <>
+              <NavBar />
+              <ContactPage />
+              <Footer />
+            </>
+          } />
+          <Route path='/dashboard' element={
+            <>
+              <NavBar />
+              <Order />
+              <Footer />
+            </>
+          } />
 
-        <Route path='/admin/support' element={
-          <>
-            <AdminSidebar />
-            <AdminHeader />
-          </>
-        } />
+          {/* admin  */}
 
 
-        <Route path='/login' element={<>
-          <Login />
-        </>} />
-        <Route path='*' element={
-          <>
-            <NavBar />
-            <Error />
-            <Footer />
-          </>
-        } />
+          <Route path='/admin/dashboard' element={
+            <>
+              <AdminSidebar />
+              <AdminHeader />
+            </>
+          } />
 
-      </Routes>
-      <ToastContainer
-        position="top-center"
-        autoClose={5000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-        theme="light"
-      />
+          <Route path='/admin/orders' element={
+            <>
+              <AdminSidebar />
+              <AdminHeader />
+            </>
+          } />
+
+
+          <Route path='/admin/users' element={
+            <>
+              <AdminSidebar />
+              <AdminHeader />
+            </>
+          } />
+
+          <Route path='/admin/support' element={
+            <>
+              <AdminSidebar />
+              <AdminHeader />
+            </>
+          } />
+
+
+          <Route path='/login' element={<>
+            <Login />
+          </>} />
+          <Route path='*' element={
+            <>
+              <NavBar />
+              <Error />
+              <Footer />
+            </>
+          } />
+
+        </Routes>
+        <ToastContainer
+          position="top-center"
+          autoClose={5000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="light"
+        />
+      </ScrollToTop>
     </BrowserRouter>
   )
 }

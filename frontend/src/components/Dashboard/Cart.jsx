@@ -5,9 +5,8 @@ import Cookies from 'js-cookie'
 import { useEffect, useState } from "react";
 import jwt_decode from 'jwt-decode';
 import axios from 'axios';
-import { useNavigate } from "react-router-dom";
-
-
+import { useNavigate, useLocation } from "react-router-dom";
+import queryString from 'query-string';
 
 
 const Cart = () => {
@@ -18,22 +17,47 @@ const Cart = () => {
     const [token, setToken] = useState(null)
     const [userId, setUserId] = useState(null);
 
+    const [serviceName, setServiceName] = useState(null);
+    const [qty, setQty] = useState(1);
+    const [prices, setPrice] = useState();
+
+
     useEffect(() => {
         const token = Cookies.get('token');
         if (token !== undefined) {
             const decodedToken = jwt_decode(token);
             setToken(token)
 
+
             // Access the payload data from the decoded token
             const { user } = decodedToken;
             setName(user.name)
             setUserId(user.id)
 
-            console.log(userId);
+            getServiceName();
         } else {
             navigate('/')
         }
     }, [])
+
+    const location = useLocation();
+    const price = 240;
+
+    // get service name form query parameter
+    const getServiceName = () => {
+        const queryParams = queryString.parse(location.search);
+        const name = queryParams.name;
+
+        setPrice(price)
+        setServiceName(name);
+    }
+
+    const qtyPrice = () => {
+        const qty = document.getElementById('qty').value;
+        const totalPrice = qty * price;
+        setQty(qty);
+        setPrice(totalPrice);
+    }
 
 
 
@@ -48,7 +72,7 @@ const Cart = () => {
         const city = document.getElementById('city').value;
         const state = document.getElementById('state').value;
         const zip = document.getElementById('zip').value;
-        const price = document.getElementById('price').innerText;
+        const sName = document.getElementById('sName').innerHTML;
 
         let payment_mode;
         if (document.getElementById('bank').checked == true) {
@@ -57,7 +81,7 @@ const Cart = () => {
             payment_mode = "Cod";
         }
 
-        if (!date || !time || !name || !phone || !country || !address || !city || !state || !zip) {
+        if (!date || !time || !name || !sName || !phone || !country || !address || !city || !state || !zip) {
             return toast.error("All Filed are required")
         }
         try {
@@ -70,11 +94,15 @@ const Cart = () => {
                     schedule_time: time,
                     name,
                     phone,
+                    service_type: Object.values({ sName }).join(""),
+                    qty: Object.values({ qty }).join(""),
                     address: `${address} ${country} ${city} ${state} ${zip}`,
-                    payment: price,
+                    payment: Object.values({ prices }).join(""),
                     payment_mode,
                     user_id: userId
                 }
+
+                console.log(orderObj);
 
                 const headers = {
                     'x-auth-token': token,
@@ -138,7 +166,7 @@ const Cart = () => {
                 <div className='p-0' style={{ width: '100%' }}>
                     <img src="/src/asset/images/date_time_pg_banner.jpg" width="100%" alt="" />
                 </div>
-                <div className="col-md-12 left_wash_service">
+                <div className="col-md-12 col-12 left_wash_service">
                     <div class="container mt-5">
                         <div class="title">
                             <h2>Order Form</h2>
@@ -190,8 +218,30 @@ const Cart = () => {
                                         <th colspan="2">Your order</th>
                                     </tr>
                                     <tr>
-                                        <td>Subtotal</td>
-                                        <td id="price">200₹</td>
+                                        <td>Service Name</td>
+                                        <td id="sName">{serviceName}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Quantity</td>
+                                        {/* <td id="qty">{qty}</td> */}
+                                        <td id='qtys'>
+                                            <select name="qty" id="qty" onChange={qtyPrice}>
+                                                <option value="1" selected>1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                                <option value="6">6</option>
+                                                <option value="7">7</option>
+                                                <option value="8">8</option>
+                                                <option value="9">9</option>
+                                                <option value="10">10</option>
+                                            </select>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total Price</td>
+                                        <td id="price">{prices}</td>
                                     </tr>
                                     <tr>
                                         <td>Shipping</td>
@@ -208,11 +258,14 @@ const Cart = () => {
                                 <div>
                                 </div>
                                 <button type="button" id='orderSubmit' onClick={buttonSubmit}>Place Order</button>
+                                {
+                                    // {
+                                    //     sName? "Yes": "Please select the service types "
+                                    // }
+                                }
                             </div>
                         </div>
                     </div>
-                </div>
-                <div className="col-md-6">
                 </div>
             </div>
         </div >

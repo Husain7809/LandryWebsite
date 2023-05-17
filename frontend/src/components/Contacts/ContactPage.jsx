@@ -1,10 +1,17 @@
 import { NavLink } from "react-router-dom"
 import axios from 'axios';
 import { toast } from 'react-toastify';
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useLocation } from 'react-router-dom';
 
 
 const ContactPage = () => {
+
+    const location = useLocation();
+
+    useEffect(() => {
+        window.scrollTo(0, 0); // Scroll to top on component change
+    }, [location]);
 
 
     const [loading, setLoading] = useState(false)

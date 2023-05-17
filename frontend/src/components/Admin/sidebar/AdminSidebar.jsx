@@ -16,7 +16,7 @@ const AdminSidebar = () => {
     // logout function
     const logout = () => {
         Cookies.remove('token');
-        navigate('/service')
+        navigate('/')
     }
 
     return (
